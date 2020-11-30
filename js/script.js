@@ -7,7 +7,6 @@ $(document).ready(function(){
     //al click sul pulsante add aggiungo una nuova task in pagina
     $('#add').click(function(){
 
-        console.log('ciao');
         var userInput = $('.add-task input').val();
 
         var context = {
@@ -16,6 +15,7 @@ $(document).ready(function(){
 
         var html = template(context);
         $('.to-do').append(html);
+        $('.add-task input').val('');
     });
 
     
