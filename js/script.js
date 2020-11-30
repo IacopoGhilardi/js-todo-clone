@@ -7,15 +7,18 @@ $(document).ready(function(){
     //al click sul pulsante add aggiungo una nuova task in pagina
     $('#add').click(function(){
 
-        var userInput = $('.add-task input').val();
+        if (!($('.add-task input').val() == '')) {
+            var userInput = $('.add-task input').val();
 
-        var context = {
-            "content": userInput
+            var context = {
+                "content": userInput
+            }
+    
+            var html = template(context);
+            $('.to-do').append(html);
+            $('.add-task input').val('');
         }
 
-        var html = template(context);
-        $('.to-do').append(html);
-        $('.add-task input').val('');
     });
 
     
