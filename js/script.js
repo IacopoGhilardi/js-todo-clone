@@ -24,7 +24,14 @@ $(document).ready(function(){
     
     //al click sull'icon X rimuovo la task in pagina
     $(document).on('click', '.fa-times-circle', function(){
-        $(this).parent().remove();
+        $(this).parent().parent().remove();
+    });
+
+
+    $(document).keydown(function(event){
+        if(event.which == 13){
+            $('#add').trigger('click');
+        }
     });
 
 });
