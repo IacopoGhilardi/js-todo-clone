@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- mio script -->
     <script src="js/script.js"></script>
     <title>Todo List</title>
 </head>
 <body>
-    
+
+    <h1>To do List</h1>
+
+    <div class="add-task">
+        <form action="" class="add-task">
+            <h3>List another task</h3>
+            <input type="text">
+        </form>
+        <button id="add">Add</button>
+    </div>
+
+
+    <div class="to-do"></div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div class="task">
+          <p>{{content}} <i class="fas fa-times-circle"></i></p>
+        </div>
+    </script>
 </body>
 </html>
